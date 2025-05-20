@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
+const addExcel = require('./Routers/addExcel'); // Adjust path as needed
 const fs = require("fs");
 const path = require("path");
 
@@ -36,6 +37,7 @@ app.use(bodyParser.json());
 // Routes
 app.use("/api", questionRoutes);
 app.use("/api/admin", adminRoutes);
+app.use('/', addExcel);
 
 
 // Email verification route (handled inside adminRoutes):

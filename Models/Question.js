@@ -5,6 +5,7 @@ const QuestionSchema = new mongoose.Schema({
   questionText: { type: String, required: true },
   options: { type: [String], required: true }, 
   correctAnswer: { type: String, required: true },
+  category: { type: String, required: true }
   
 });
   
